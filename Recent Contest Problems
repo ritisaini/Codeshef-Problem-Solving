@@ -1,0 +1,23 @@
+// Given a list of N contest codes, where each contest code is either START38 or LTIME108,
+// help Chef count how many problems were featured in each of the contests.
+import java.util.*;
+public class RecentContestProblems {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        while(t-->0){
+            int n = sc.nextInt();
+
+            int count1 = 0, count2 = 0;
+            for(int i=0; i<n; i++){
+                String str = sc.next();
+                if(str.equals("START38")){
+                    count1++;
+                } else if(str.equals("LTIME108")){
+                    count2++;
+                }
+            }
+            System.out.println(count1 + " " + count2);
+        }
+    }
+}
